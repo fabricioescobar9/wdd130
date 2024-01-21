@@ -2,12 +2,12 @@
 
 :root {
   --primary-color: #1f2f16;
-  --secondary-color: ;
+  --secondary-color: #000000;
   --accent1-color: #c5d1eb;
   --accent2-color: #92afd7;
 
-  --heading-font: 'Open Sans', sans-serif;
-  --paragraph-font: 'Open Sans', sans-serif;
+  --heading-font: sans-serif;
+  --paragraph-font: sans-serif;
 
   --nav-background-color: #c5d1eb;
   --nav-link-color: #5a7684;
@@ -21,7 +21,7 @@ body {
     padding: 20px;
 }
 
-h1,h2,h3,h4,h5,h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
     color: var(--primary-color)
 }
