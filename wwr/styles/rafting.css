@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 :root {
-    --primary-color: #1f2f16aa;
+    --primary-color: #1f2f16;
     --secondary-color: #000000;
     --accent1-color: #c5d1eb;
     --accent2-color: #92afd7;
@@ -15,7 +15,6 @@
     --nav-hover-background-color: #92afd7;
 }
 
-
 body {
     font-family: var(--paragraph-font);
     max-width: 100%;
@@ -24,30 +23,51 @@ body {
 
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);
-    
+    color: var(--primary-color);   
+}
+
+/*--------------------------------------------------------------------------------*/
+
+/* Customizing header*/
+/*Container Grid*/
+header {
+    display: grid;
+    background-color: var(--primary-color);
+	margin: 1rem 0;
+	grid-template-columns: auto auto;
+	align-items: center;
+    justify-items: center;
 }
 
 header img {
-    display: block;
-    width: 240px;
-    height: auto;
+	width: 60%;
+    height: 70%;
+    object-fit: contain;
+    /* display: inline-block; */
+    margin: 10px
+}
+/*Container Flex*/
+header nav {
+    /* text-align: right; */
+    display: flex;
+    flex-wrap: wrap;
+	/* list-style: none; */
+}
+/*Item Flex*/
+header nav a {
+    /* display: block; */
+	color: var(--secondary-color);
+	padding: 10px 60px;
+    background-color: var(--accent1-color);
+    border: 1px solid var(--primary-color);
+	text-decoration: none;
 }
 
-footer img {
-    display: inline-block;
-    width: 40px;
-    height: auto;
-}
-
-footer a {
-    text-decoration: none;
-}
+/*--------------------------------------------------------------------------------*/
 
 .hero {
     position: relative;
 }
-
 
 .hero h1 {
     position: absolute;
@@ -55,9 +75,10 @@ footer a {
     top: 5%;
     text-align: center;
     width: 100%;
-    padding: 20px;
+    height: auto;
+    padding: 15px;
     color: var(--accent1-color);
-    border: 1px #1f2f16;
+    border: 1px var(--primary-color);
     background: #1f2f16aa;
     box-shadow: 0 0 30px #111;
     
@@ -66,11 +87,11 @@ footer a {
 .hero article {
     position: absolute;
     box-sizing: border-box;
-    top: 250px;
+    top: 30%;
     right: 10%;
     left: 10%;
     width: 80%;
-    padding: 25px;
+    padding: 10px;
     background: var(--accent2-color);
     opacity: 0.8;
     border: 1px solid #000;
@@ -78,16 +99,17 @@ footer a {
 }
 
 .hero article img {
-    float: right;
-    width: 150px;
-    height: 180px;
+    width: 20%;
+    height: 20%;
+    object-fit: contain;
     float: right;
 
 }
 
 .hero article p {
-    color: #000;
+    color: var(--secondary-color);
     font-style: italic;
+    padding: 1rem;
 }
 
 .hero img {
@@ -95,3 +117,93 @@ footer a {
     width: 100%;
     height: auto;
 }
+
+/*--------------------------------------------------------------------------------*/
+
+.history {
+    background: var(--accent1-color);
+    height: 450px;
+    width: auto;
+    margin: 1rem 0;
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+}
+
+.history h2 {
+    position: absolute;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.history img {
+    width: 70%;
+    justify-self: center;
+    align-self: center;
+}
+
+.history p {
+    align-self: center;
+    justify-self: flex-start;
+}
+
+/*--------------------------------------------------------------------------------*/
+
+.adventure {
+    background: var(--accent1-color);
+    height: 350px;
+    width: auto;
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    justify-items: center;
+    align-items: center;
+}
+.adventure h2 {
+    position: absolute;
+    justify-self: center;
+    align-self: flex-start;
+}
+
+.adventure img {
+    width: 100%;
+    height: auto;
+}
+
+.adventure figcaption {
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------*/
+
+footer {
+    color: var(--accent1-color);
+    background-color: var(--primary-color);
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    height: 150px;
+
+}
+footer p {
+    align-self: center;
+    justify-self: center;
+    position: absolute;
+}
+
+footer nav {
+    position: relative;
+    grid-column: 2/3;
+    align-self: center;
+    justify-self: center;
+}
+
+footer img {
+    width: 15%;
+    height: auto;
+    margin: 0.3rem;
+}
+
+footer a {
+    text-decoration: none;
+}
+
