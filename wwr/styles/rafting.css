@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 :root {
-    --primary-color: #1f2f16;
+    --primary-color: #263a1b;
     --secondary-color: #000000;
     --accent1-color: #c5d1eb;
     --accent2-color: #92afd7;
-  
-    --heading-font: 'Open Sans', sans-serif;
+
+    --heading-font: sans-serif;
     --paragraph-font: 'Open Sans', sans-serif;
-  
+
     --nav-background-color: #c5d1eb;
     --nav-link-color: #5a7684;
     --nav-hover-link-color: #1f2f16;
@@ -23,7 +23,7 @@ body {
 
 h1, h2 {
     font-family: var(--heading-font);
-    color: var(--primary-color);   
+    color: var(--primary-color);
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -37,30 +37,31 @@ header {
 	grid-template-columns: auto auto;
 	align-items: center;
     justify-items: center;
+    height: 300px;
 }
 
 header img {
-	width: 50%;
-    height: 50%;
+	width: 200px;
+    height: 200px;
+    border-radius: 0.2rem;
     object-fit: contain;
-    /* display: inline-block; */
-    margin: 10px
+    margin: 10px;
 }
+
 /*Container Flex*/
 header nav {
-    /* text-align: right; */
     display: flex;
     flex-wrap: wrap;
-	/* list-style: none; */
 }
+
 /*Item Flex*/
 header nav a {
-    /* display: block; */
 	color: var(--secondary-color);
 	padding: 7px 50px;
     background-color: var(--accent1-color);
     border: 1px solid var(--primary-color);
 	text-decoration: none;
+    border-radius: 0.2rem;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -72,16 +73,16 @@ header nav a {
 .hero h1 {
     position: absolute;
     box-sizing: border-box;
-    top: 5%;
+    top: 10%;
     text-align: center;
     width: 100%;
-    height: auto;
-    padding: 15px;
+    height: 100px;
+    padding: 40px;
     color: var(--accent1-color);
     border: 1px var(--primary-color);
-    background: #1f2f16aa;
+    background: #1f2f16dc;
     box-shadow: 0 0 30px #111;
-    
+
 }
 
 .hero article {
@@ -204,6 +205,184 @@ footer img {
 }
 
 footer a {
-    text-decoration: none;
+    text-decoration: none; 
 }
 
+/* CONTACT.HTML */
+/*-------------------------------------------------------------------------------*/
+
+/* COMPANY INFO */
+.company-info {
+    background-color: var(--accent1-color);
+    width: auto;
+    height: 400px;
+    margin: 1rem auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+
+.info {
+    justify-self: center;
+    padding: 50px;
+}
+
+.info h2 {
+    color: var(--primary-color);
+}
+
+.info img {
+    float: left;
+    padding-right: 15px;
+}
+
+.info p {
+    padding: 10px;
+}
+
+.map {
+    justify-self: end;
+    margin: 25px;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*EMPLOYEE IMAGES*/
+
+.employee
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+.employee img {
+    width: 100%;
+    height: auto;
+    justify-self: center;
+    border-radius: 0.2rem;
+}
+
+.employee figcaption {
+    font-style: italic;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*FORM*/
+
+.container-form {
+    background-color: var(--accent1-color);
+}
+
+.container-form h2 {
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.container-form p {
+    width: 550px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.type-box {
+    display: flex;
+    padding-bottom: 10px;
+    width: 550px;
+    margin: auto;
+
+}
+
+.type-box label {
+    display: block;
+}
+
+.type-name {
+    flex-basis: 35%;
+}
+
+.type-name input {
+    width: 80%;
+    padding: 7px;
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+}
+
+.type-mail {
+    flex-basis: 65%;
+}
+
+.type-mail input {
+    width: 100%;
+    padding: 7px;
+    border-radius: 0.2rem;
+    box-sizing: border-box;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*RADIO*/
+/*Radio container*/
+.radio-box {
+    display: flex;
+    justify-content: space-between;
+    width: 550px;
+    margin: auto;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*TYPE THE MESSAGE*/
+
+.message {
+    width: 550px;
+    margin: auto;
+}
+
+.message textarea {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 0.2rem;
+}
+/*-------------------------------------------------------------------------------*/
+/*CHECKBOX*/
+
+.checkbox {
+    width: 550px;
+    margin: auto;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: center;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*BUTTON*/
+
+.button {
+    width: 550px;
+    margin: auto;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 50px;
+}
+
+.button button {
+    height: 40px;
+    width: 150px;
+    font-size: 1.2rem;
+    color: var(--accent1-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.2rem;
+}
+
+/*-------------------------------------------------------------------------------*/
+/*LINK WIREFRAME*/
+
+.wireframe {
+    color: var(--accent2-color);
+    position: absolute;
+    justify-self: center;
+    align-self: flex-end;
+    padding: 15px;
+}
