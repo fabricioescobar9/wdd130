@@ -383,46 +383,99 @@ footer a {
 
 
 /*-------------------------------------------------------------------------------*/
-/* TRIPS CSS */
+/* MAIN:TRIPS CSS */
 
 .container-trips {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);   
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;   
 }
 
-.container-left-column {
+.trips-left-column {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    margin: 20px auto;   
-}
-
-.item-left-column, .item-right-column {
-    text-align: center;
-}
-
-.item-left-column p {
     width: 500px;
 }
 
-.container-right-column {
+.trips-descrip {
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+/* .trips-right-column {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    margin: 20 auto;
+    justify-content: space-around;
+    width: 500px;
+} */
+
+.trips-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
-.item-right-column p {
-    padding: 40px;
+.trips-cta p {
+    padding: 0px 40px 0px 40px;
+    margin-bottom: 125px;
+    text-align: center;
 }
 
-.item-right-column nav a {
-    color: var(--secondary-color);
-	padding: 10px 20%;
+.trips-cta nav a {
+    height: auto;
+    width: 100%;
+    padding: 15px;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
     background-color: var(--accent1-color);
-    border: 1px solid var(--primary-color);
+    border: 1px var(--primary-color);
 	text-decoration: none;
-    border-radius: 0.2rem;
+    border-radius: 0.4rem;
+}
+
+.trips-table {
+    margin-top: 70px;
+    padding-top: 25px;
+}
+
+.trips-table caption {
+    font-style: italic;
+    caption-side: bottom;
+    padding-top: 15px;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+td, th {
+    border: 2px solid black;
+    width: 400px;
+    padding: 10px;
+}
+
+.table-titles {
+    text-align: center;
+    background-color: var(--primary-color);
+    color: var(--accent1-color);
+    font-weight: bold;
+}
+
+.table-plan, .table-day  {
+    text-align: center;
+    background-color: var(--accent1-color);
+    color: var(--primary-color);
+    font-weight: bold;
 }
 
 .wireframe-T {
