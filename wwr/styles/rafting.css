@@ -27,14 +27,12 @@ h1, h2 {
 }
 
 /*--------------------------------------------------------------------------------*/
+/* HEADER CONTAINER*/
 
-/* Customizing header*/
-/*Container Grid*/
 header {
     display: grid;
+    grid-template-columns: 1fr 2fr;
     background-color: var(--primary-color);
-	margin: 1rem 0;
-	grid-template-columns: auto auto;
 	align-items: center;
     justify-items: center;
     height: 300px;
@@ -43,25 +41,21 @@ header {
 header img {
 	width: 200px;
     height: 200px;
-    border-radius: 0.2rem;
-    object-fit: contain;
-    margin: 10px;
+    border-radius: 50%;
 }
 
-/*Container Flex*/
 header nav {
     display: flex;
-    flex-wrap: wrap;
+    flex-flow: wrap;
 }
 
-/*Item Flex*/
 header nav a {
-	color: var(--secondary-color);
-	padding: 7px 50px;
+	padding: 12px 70px;
+    color: var(--secondary-color);
     background-color: var(--accent1-color);
     border: 1px solid var(--primary-color);
 	text-decoration: none;
-    border-radius: 0.2rem;
+    border-radius: 0.3rem;
 }
 
 /*--------------------------------------------------------------------------------*/
@@ -73,15 +67,14 @@ header nav a {
 .hero h1 {
     position: absolute;
     box-sizing: border-box;
-    top: 10%;
     text-align: center;
-    width: 100%;
-    height: 100px;
     padding: 40px;
+    top: 10%;
+    width: 100%;
     color: var(--accent1-color);
-    border: 1px var(--primary-color);
-    background: #1f2f16dc;
-    box-shadow: 0 0 30px #111;
+    background-color: var(--primary-color);
+    opacity: 0.9;
+    font-size: 3rem;
 
 }
 
@@ -175,13 +168,17 @@ header nav a {
 }
 
 /*-------------------------------------------------------------------------------*/
+/*FOOTER CONTAINER*/
 
 footer {
+    position: relative;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    grid-template-columns: 3fr 1fr;
     color: var(--accent1-color);
     background-color: var(--primary-color);
     margin: 1rem auto;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
     height: 150px;
 
 }
@@ -192,16 +189,13 @@ footer p {
 }
 
 footer nav {
-    position: relative;
     grid-column: 2/3;
-    align-self: center;
-    justify-self: center;
 }
 
 footer img {
-    width: 15%;
+    width: 35px;
     height: auto;
-    margin: 0.3rem;
+    margin-left: 1rem;
 }
 
 footer a {
@@ -379,7 +373,201 @@ footer a {
 /*-------------------------------------------------------------------------------*/
 /*LINK WIREFRAME*/
 
-.wireframe {
+.wireframe-CU {
+    color: var(--accent2-color);
+    position: absolute;
+    justify-self: center;
+    align-self: flex-end;
+    padding: 15px;
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/* TRIPS CSS */
+
+.container-trips {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);   
+}
+
+.container-left-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px auto;   
+}
+
+.item-left-column, .item-right-column {
+    text-align: center;
+}
+
+.item-left-column p {
+    width: 500px;
+}
+
+.container-right-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20 auto;
+}
+
+.item-right-column p {
+    padding: 40px;
+}
+
+.item-right-column nav a {
+    color: var(--secondary-color);
+	padding: 10px 20%;
+    background-color: var(--accent1-color);
+    border: 1px solid var(--primary-color);
+	text-decoration: none;
+    border-radius: 0.2rem;
+}
+
+.wireframe-T {
+    color: var(--accent2-color);
+    position: absolute;
+    justify-self: center;
+    align-self: flex-end;
+    padding: 15px;
+}
+
+
+/*-------------------------------------------------------------------------------*/
+/* MAIN: HOMEPAGE CSS */
+
+.container-home {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    gap: 25px;
+}
+
+.home-cta {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.home-cta p {
+    height: auto;
+    width: 450px;
+}
+
+.home-cta strong {
+    color: var(--primary-color);
+    font-size: large;
+}
+
+.home-cta nav {
+    height: auto;
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+}
+
+.home-cta nav a {
+    height: auto;
+    width: 100%;
+    padding: 15px;
+    padding-left: 100px;
+    padding-right: 100px;
+    font-size: 1.2rem;
+    color: var(--primary-color);
+    background-color: var(--accent1-color);
+    border: 1px var(--primary-color);
+	text-decoration: none;
+    border-radius: 0.4rem;
+}
+
+.home-signup {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100%;
+    width: 550px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    background-color: var(--accent1-color);
+    border-radius: 0.2;
+}
+
+.home-signup p {
+    padding: 50px 90px 0px 90px;
+}
+
+.home-signup strong {
+    color: var(--primary-color);
+    font-size: large;
+}
+
+.home-signup input {
+    padding: 8px;
+    width: 350px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.home-signup button {
+    padding: 15px;
+    width: 368px;
+    margin-top: 70px;
+    margin-bottom: 25px;
+    font-size: 1.2rem;
+    color: var(--accent1-color);
+    background-color: var(--primary-color);
+    border: none;
+    border-radius: 0.4rem;
+}
+
+.home-purpose {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.p-purpose {
+    width: 500px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.p-purpose strong {
+    color: var(--nav-hover-link-color);
+    font-size: large;
+}
+
+.home-offerings {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    margin-top: 50px;
+}
+
+.home-offerings p {
+    width: 500px;
+    margin-top: 50px;
+}
+
+.home-offerings ul {
+    width: 470px;
+    margin-bottom: 50px;
+}
+
+.home-offerings li {
+    padding: 5px;
+}
+
+.wireframe-H {
     color: var(--accent2-color);
     position: absolute;
     justify-self: center;
