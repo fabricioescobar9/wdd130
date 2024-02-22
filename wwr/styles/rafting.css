@@ -548,7 +548,6 @@ td, th {
     margin-top: 25px;
     margin-bottom: 20px;
     background-color: var(--accent1-color);
-    border-radius: 0.2;
 }
 
 .home-signup p {
